@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+
+            /* Child Combinator */
+            div > span {
+                /* color: red; */
+            }
+
+            /* Adjacent Combinator */
+            p + span {
+                /* color: red; */
+            }
+
+            /* General Sibling Combinator */
+            p ~ span {
+                /* color: red; */
+            }
+
+            /* Precedence of Selectors */
+
+            /* Type Selector */
+            article{
+                /* color: blue; */
+            }
+
+            /* id selector */
+            #article_id {
+                /* color : red; */
+            }
+
+            /* class Selector */
+            .article_class {
+                /* color: green; */
+            }
+
+            /* id > type and class */
+            /* class > type */
+
+            /* id > class > type */
+
+            a {
+                font-size: 30px;
+            }
+
+            a:visited{
+                color: green;
+            }
+
+            a:hover {
+                color: red;
+            }
+
+            a:link{
+                color: aqua;
+            }
+
+            a:active{
+                color: chartreuse;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>
+              This is Paragraph 1.
+            </p>
+            <span>
+                This is Span 1.
+            </span>
+            <span>
+                This is Span2.
+            </span>
+            <article id="article_id" class="article_class">
+                This is Article.
+            </article>
+            <a target="_blank" href="https://www.paytm.com">THe Link to Paytm</a><br/>
+            <a target="_blank" href="https://www.w3schools.com">THe Link to W3schools</a><br/>
+            <a target="_blank" href="https://www.youtube.com">THe Link to Youtube</a>
+            <p>
+                This is Paragraph 2.
+            </p>
+            <div>
+                This is Child Container.
+                <p>This is Sub Child Paragraph 3.</p>
+            </div>
+        </div>
+    </body>
+</html>
