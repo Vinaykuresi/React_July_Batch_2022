@@ -1,0 +1,143 @@
+'72'
+typeof('72')
+'string'
+var num = 40
+undefined
+typeof(num)
+'number'
+correct = true
+true
+typeof(correct)
+'boolean'
+var celcius;
+undefined
+celcius
+undefined
+celcius = null
+null
+typeof(celcius)
+'object'
+array = [3, "Vinay", true]
+(3) [3, 'Vinay', true]
+typeof(array)
+'object'
+
+
+String : 
+'tomorrow'
+'tomorrow'
+'tomorrow's'
+VM2955:1 Uncaught SyntaxError: Unexpected identifier
+"tomorrow's"
+"tomorrow's"
+
+var name = "Infosys"
+undefined
+name[0]
+'I'
+name[6]
+'s'
+name.length
+7
+
+Boolean : 
+num = ""
+''
+if(100){
+    num = true
+}else{
+    num = false
+}
+true
+num
+true
+if(0){
+    num = true
+}else{
+    num = false
+}
+false
+if(-0){
+    num = true
+}else{
+    num = false
+}
+
+false
+if(-5){
+    num = true
+}else{
+    num = false
+}
+
+true
+if("Vinay"){
+    num = true
+}else{
+    num = false
+}
+
+true
+if(""){
+    num = true
+}else{
+    num = false
+}
+
+false
+if(NaN){
+    num = true
+}else{
+    num = false
+}
+
+false
+0/0
+NaN
+"You"*0
+NaN
+typeof("you"*0)
+'number'
+typeof(0/0)
+'number'
+if((10>20)*30){
+    num = true
+}else{
+    num = false
+}
+
+false
+(10>20)*30
+0
+if((10>20)+30){
+    num = true
+}else{
+    num = false
+}
+
+true
+if(1){
+    num = true
+}else{
+    num = false
+}
+
+true
+if(undefined){
+    num = true
+}else{
+    num = false
+}
+
+false
+if(null){
+    num = true
+}else{
+    num = false
+}
+
+false
+
+
+
+
