@@ -138,6 +138,36 @@ if(null){
 
 false
 
+Undefined : 
+var temp;
+undefined
+temp
+undefined
+var cust = undefined
+undefined
+cust
+undefined
 
-
+Object : 
+var employee = {
+    name : "Vinay",
+    qualification : "MCA",
+    designation : "TL",
+    phone : "9154549566",
+    details : {
+        emp_id : "251736",
+        location : "Bangalore"
+    }
+}
+undefined
+name = "Vinay"
+'Vinay'
+name[1]
+'i'
+name[name.length-1]
+'y'
+employee.designation
+'TL'
+employee.details.location
+'Bangalore'
 
