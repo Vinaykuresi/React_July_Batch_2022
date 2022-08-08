@@ -171,3 +171,22 @@ employee.designation
 employee.details.location
 'Bangalore'
 
+Object : 
+var name = undefined
+undefined
+name = "vinay"
+'vinay'
+var obj = null
+undefined
+typeof(obj)
+'object'
+obj = {
+    name : "Vinay",
+    class : "XI"
+}
+{name: 'Vinay', class: 'XI'}
+obj.name
+'Vinay'
+typeof(obj)
+'object'
+

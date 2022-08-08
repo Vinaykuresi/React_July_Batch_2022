@@ -24,3 +24,14 @@ Types of DataTypes :
        ex : 3, "Vinay",     ex : [3, "Vinay", false] -> Array
             false                {name : "Vinay", qualification : "MCA"}
 
+Types of Operators : 
+    1) Arithematic Operator 
+        a) Binary Operators : 
+                +, -, *, /, %
+        b) Unary Operator :
+                --, ++
+    2) Assignment Operator
+    3) Relational Operator
+    4) Logical Operator
+    5) Conditional Operator
+
