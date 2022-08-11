@@ -45,3 +45,81 @@ NaN
 
 Assignment : 
 5 + 4 * 9 % (3 + 1) / 6 - 1
+
+Assignment Operator :
+var num = 0
+undefined
+num += 10
+10
+# num = num + 10
+VM478:1 Uncaught SyntaxError: Invalid or unexpected token
+num -= -12
+22
+# num = num -(-12)
+VM602:1 Uncaught SyntaxError: Invalid or unexpected token
+# num = num + 12
+VM662:1 Uncaught SyntaxError: Invalid or unexpected token
+num *= num/-2
+-242
+# num = (num * num)/-2 -> -(num * num)/2
+VM916:1 Uncaught SyntaxError: Invalid or unexpected token
+num %= 11
+-0
+num *=(-num)*(+2)%2
+-0
+# num = num * -(num) * 2 %2 
+VM1329:1 Uncaught SyntaxError: Invalid or unexpected token
+# num = -0 * 0 * 2 % 2
+VM1441:1 Uncaught SyntaxError: Invalid or unexpected token
+
+Relational Operator : 
+var num = 20
+undefined
+var num1 = 30
+undefined
+var num2 = -6
+undefined
+num = num1 > -(num2-25)
+false
+num = num <= true 
+true
+num == num1 == num2 * true + 30
+false
+1 > 1
+false
+console.log(true > false != true != (-30) * true > false + 234)
+
+// Strict Equality and Strict InEquality : 
+console.log(true == 1)
+console.log(true === 1)
+
+console.log("1" == 1)
+console.log("1" === 1)
+console.log(true === (true !== false))
+
+// Logical Operators : 
+!(10 > 20)
+true
+10 >= 5 && 20 > 20
+false
+10 >= 5 || 20 > 20
+true
+
+// Type Of : 
+console.log(typeof("Vinay"))
+console.log(typeof(10.5))
+console.log(typeof(10 > 20))
+console.log(typeof(undefined))
+console.log(typeof(null))
+console.log(typeof({name : "Vinay"}))
+console.log(typeof([1, 2]))
+string
+number
+boolean
+undefined
+object
+object
+object
+
+
+

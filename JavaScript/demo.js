@@ -1,0 +1,7 @@
+console.log(typeof("Vinay"))
+console.log(typeof(10.5))
+console.log(typeof(10 > 20))
+console.log(typeof(undefined))
+console.log(typeof(null))
+console.log(typeof({name : "Vinay"}))
+console.log(typeof([1, 2]))

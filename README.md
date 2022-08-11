@@ -31,7 +31,12 @@ Types of Operators :
         b) Unary Operator :
                 --, ++
     2) Assignment Operator
+        a) =, +=, -=, *=, /=, %=
     3) Relational Operator
+        a) >, >=, <, <=, ==, !=, ===, !==
     4) Logical Operator
+        a) Logical NOT , !
+        b) Logical AND , &&
+        c) Logical OR, ||
     5) Conditional Operator
 
