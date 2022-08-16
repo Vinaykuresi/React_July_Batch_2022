@@ -121,5 +121,55 @@ object
 object
 object
 
+// Type of Operator : 
+console.log(typeof("Vinay"))
+console.log(typeof(10.5))
+console.log(typeof(10 > 20))
+console.log(typeof(undefined))
+console.log(typeof(null))
+console.log(typeof({name : "Vinay"}))
+console.log(typeof([1, 2]))
 
+// Conditional Operator : 
+console.log(10 > 20 ? true : false)
 
+// if else
+if(10 > 20){
+    console.log(true)
+}else{
+    console.log(false)
+}
+
+// Switch temperature
+var performanceRating = 5;
+
+switch(performanceRating){
+    case 5:
+        console.log("Excellent")
+        break;
+    case 4:
+        console.log("Good")
+        break;
+    case 3:
+        console.log("Average")
+        break;
+    case 2:
+        console.log("Intermediate")
+        break;
+    default:
+        console.log("Poor")
+        break;
+}
+
+// if else ladder
+if(temperature <= 20) {
+    console.log("Cool")
+}else if(temperature > 20 && temperature <=30){
+    console.log("Normal")
+}else if(temperature > 30 && temperature <= 40){
+    console.log("hot")
+}else{
+    console.log("Very Severe")
+}
+
+// for loop
