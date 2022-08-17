@@ -1,24 +1,16 @@
-const readline = require('readline').createInterface({
-    input : process.stdin,
-    output : process.stdout
-});
+const prompt = require('prompt-sync')();
 
-totalBags = 40;
+const rows = Number(prompt('Enter the number of Rows : '));
 
-async function removeBags(remainingbags, collectedBags){
-    console.log("Function called")
-    return Promise.resolve(remainingbags-collectedBags);
-}
-
-async function definingLoops(){
-    for(var remainingbags = totalBags; remainingbags >=0;){
-        readline.question("Enter the baggages colleted ? : ", async bags => {
-            console.log("No.of bags collected : ", bags);
-            remainingbags = await removeBags(remainingbags, bags)
-            console.log("No.of remamining bags : ", remainingbags)
-            readline.close()
-        });
+var star = ""
+for(var row = 1; row <= rows; row++){
+    for(var col = 0; col < rows-row ; col++){
+        star += " "
     }
+    for(var col = 0; col < row; col++){
+        star += "*"
+    }
+    star += "\n"
 }
 
-definingLoops()
+console.log(star)

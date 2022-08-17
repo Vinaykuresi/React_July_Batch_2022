@@ -172,4 +172,78 @@ if(temperature <= 20) {
     console.log("Very Severe")
 }
 
-// for loop
+// for loop limit model : 
+const prompt = require('prompt-sync')();
+
+var totalBags = 40;
+
+for(var remainingbags = totalBags; remainingbags >0;){
+    
+    const bags = Number(prompt('No. of Bags collected ? : '));
+    if(bags <= remainingbags){
+        console.log("No.of bags collected : ", bags);
+        remainingbags -= bags
+        console.log("No.of remamining bags : ", remainingbags)
+    }else{
+        console.log("The remaining left bags are only : ", remainingbags)
+    }   
+}
+
+// star pattrens : 
+rows = 5
+for(let i = 0; i < rows; i++){
+    var star = ""
+    for(let j = 0; j<=i; j++){
+        star += "*"
+    }
+    console.log(star)
+}
+
+*
+**
+***
+****
+
+// three loops : 
+var star = ""
+for(var row = 1; row <= rows; row++){
+    for(var col = 0; col < rows-row ; col++){
+        star += " "
+    }
+    for(var col = 0; col < row; col++){
+        star += "*"
+    }
+    star += "\n"
+}
+
+// two loops
+var stars = "*****"
+var star = ""
+for(var row = 1; row <= rows; row++){
+    for(var col = 0; col < rows-row ; col++){
+        star += " "
+    }
+    star += stars.slice(0,row)
+    star += "\n"
+}
+
+console.log(star)
+
+
+//      *
+//     **
+//    ***
+//   ****
+//  *****
+
+Assignments : 
+// *****
+// ****
+// ***
+// **
+// *
+
+//    *
+//   ***
+//  *****
+// *******
