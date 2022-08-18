@@ -247,3 +247,91 @@ Assignments :
 //   ***
 //  *****
 // *******
+
+// for loop using prompt
+const prompt = require('prompt-sync')();
+
+const rows = Number(prompt('Enter the number of Rows : '));
+
+var star = ""
+for(var row = 1; row <= rows; row++){
+    for(var col = 0; col < rows-row ; col++){
+        star += " "
+    }
+    for(var col = 0; col < row; col++){
+        star += "*"
+    }
+    star += "\n"
+}
+
+console.log(star)
+
+// While Loop : 
+var totalBags = 50;
+
+while(totalBags > 0){
+    const pickedUpBags = Number(prompt('Enter the no.of bags Picked Up : '));
+    if(pickedUpBags <= totalBags){
+        totalBags -= pickedUpBags
+        console.log("The remaining bags left are : ", totalBags)
+    }else{
+        console.log("The picked up bags ", pickedUpBags, " shouldn't be greater than toal no of bags : ", totalBags)
+    }
+}
+
+// Infinte Loops : 
+var num = 10
+var count = 0
+
+while(count < num){
+  console.log("The count value : ", count)
+  count--
+}
+
+for(; count < num; count--){
+  console.log("The count value : ", count)
+}
+
+// pyramid : 
+const rows = Number(prompt("Enter the No of Rows : "));
+
+var row = 1
+var col = 1
+
+var star = ""
+while(row <= rows){
+    while(col <= rows - row){
+        star += " "
+        col++
+    }
+    col = 1
+    while(col <= (2*row-1)){
+        star += "*"
+        col++
+    }
+    star += "\n"
+    row++
+    col = 1
+}
+
+console.log(star)
+
+
+//   *
+//  ***
+
+// do while : 
+var num = 10
+var count = 0
+
+while (count > num) {
+    count++
+    console.log("The count value : ", count)
+}
+
+do {
+    console.log("The count value : ", count++)
+    console.log("The count value : ", count)
+} while (count > num)
+
+
