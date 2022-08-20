@@ -1,0 +1,44 @@
+<html>
+
+    <head>
+        <style>
+            #para{
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body onload="load()" >
+        <h1>The events</h1>
+        <p id="para"></p>
+        <!-- <input id="in" onkeypress="onKeyPress(document.getElementById('in').value)" type="text" /><br/> -->
+        <input id="in" onkeyup="onKeyPress(document.getElementById('in').value)" type="text" /><br/>
+        
+        <input onclick="onClick()" type="button" value="submit">
+
+        <input id="blu" onblur="myFunction()" type="text" />
+        
+        <script>
+
+            function myFunction(){
+                console.log("blur")
+                var obj = document.getElementById("blu")
+                obj.value = obj.value.toUpperCase()
+            }
+
+            function load(){
+                console.log("loading...")
+                document.getElementById("para").innerText = "This is para";
+            }
+
+            function onClick(){
+                alert("onCLick : You have an alert")
+            }
+
+            function onKeyPress(value){
+                console.log(value)
+                alert("You typed : "+value)
+            }
+        </script>
+    </body>
+</html>
