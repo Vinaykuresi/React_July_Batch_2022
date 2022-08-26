@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <ul class="fruit">
+                <li id="fruits">Orange</li>
+                <li>Brinjal</li>
+            </ul>
+        </div>
+        <div>
+            <ol>
+                <li>Orange</li>
+                <li>Brinjal</li>
+            </ol>
+        </div>
+        <script>
+            var fruit = document.getElementById("fruits").innerText 
+            console.log(fruit)
+            var list = document.getElementsByTagName("ul")
+            // console.log(list[0])
+            console.log(list[0].innerText)
+            var fruits = document.getElementsByClassName("fruit")
+            console.log(fruits[0].innerText.split("\n")[1])
+
+            var all = document.querySelectorAll("li")
+            console.log(all)
+            console.log(all[2].innerText)
+            console.log(all[2].innerText[all[2].innerText.length-1])
+
+            all[3].innerHTML = "Pinapple"
+
+            var attr = document.getElementById("fruits")
+            console.log(attr.attributes[0].value)
+
+            attr.setAttribute("class", "orange")
+
+            var fruit = document.getElementsByClassName("orange")
+            console.log(fruit[0].innerText)
+
+            attr.style.color = "red"
+            
+        </script>
+    </body>
+</html>
