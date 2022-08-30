@@ -1,0 +1,22 @@
+{
+    "employeeData" : [
+        {
+            "empId" : 1001,
+            "name" : "Vinay",
+            "Qualification" : "MCA",
+            "Designation" : "SSE"
+        },
+        {
+            "empId" : 1002,
+            "name" : "Suresh",
+            "Qualification" : "Btech",
+            "Designation" : "SSE"
+        },
+        {
+            "empId" : 1003,
+            "name" : "Krishna",
+            "Qualification" : "Btech",
+            "Designation" : "SSE"
+        }
+    ]
+}
