@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
 import axios from "axios";
+import GetEmployeeDetails from "./employeeData";
 
 class Home extends React.Component {
     constructor(props) {
@@ -8,7 +9,14 @@ class Home extends React.Component {
         this.state = {
             isLoading: true,
             data: [],
+            timer : 0
         }
+    }
+
+    setTime = () => {
+        this.setState({
+            timer : this.state.timer+1
+        })
     }
 
     componentDidMount() {
@@ -27,6 +35,12 @@ class Home extends React.Component {
             .catch((err) => {
                 console.log("Error : ", err)
             })
+        
+        // this.interval = setInterval(this.setTime, 1000);
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.interval)
     }
 
     addData = (employeeDetails) => {
@@ -45,6 +59,10 @@ class Home extends React.Component {
         //         isLoading : false
         //     })
         // }, 1500);
+
+        // if(this.state.timer > 12){
+        //     throw new Error("The timer has increased the limit of 12")
+        // }
         return (
             <div className="empTable">
                 {
@@ -81,64 +99,15 @@ class Home extends React.Component {
                             </tbody>
                         </table>
                 }
-
+                <br/>
+                <div>{this.state.timer}</div>
                 <GetEmployeeDetails addMethod={this.addData}  />
             </div>
         )
     }
 }
 
-function GetEmployeeDetails(props) {
-    const [empId, setEmpId] = useState(null);
-    const [empName, setEmpName] = useState("");
-    const [empOualf, setEmpQualf] = useState("");
-    const [empDesg, setDesg] = useState("");
 
-
-    function handleSubmit(e) {
-            e.preventDefault()
-            let employeeData = {
-                empId: empId,
-                name: empName,
-                Qualification: empOualf,
-                Designation: empDesg
-            }
-            props.addMethod(employeeData)
-            setEmpId("")
-            setEmpName("")
-            setEmpQualf("")
-            setDesg("")        
-    }
-
-    const handleChange = (e) => {
-        console.log(e.target.value)
-    }
-    // (e) => {setEmpId(...e.target.value)}
-    return (
-        <React.Fragment>
-            {/* {props.name} */}
-            <form>
-                <div className="form-group">
-                    <label htmlFor="exampleInputEmpId">Emp ID</label>
-                    <input type="text" onChange={(e) => { setEmpId(e.target.value) }} className="form-control" id="exampleInputEmpId" aria-describedby="emailHelp" placeholder="Enter EmpId" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="exampleInputEmpPass">Emp Name</label>
-                    <input type="text" onChange={(e) => { setEmpName(e.target.value) }} className="form-control" id="exampleInputEmpPass" placeholder="Enter Emp Name" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="exampleInputEmpQualf">Emp Qualification</label>
-                    <input type="text" onChange={(e) => { setEmpQualf(e.target.value) }} className="form-control" id="exampleInputEmpQualf" aria-describedby="emailHelp" placeholder="Enter Emp Qualification" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="exampleInputEmpDesg">Emp Designation</label>
-                    <input type="text" onChange={(e) => { setDesg(e.target.value) }} className="form-control" id="exampleInputEmpDesg" placeholder="Enter Emp Designation" />
-                </div>
-                <button onClick={(e) => handleSubmit(e)} type="submit" className="btn btn-primary">Submit</button>
-            </form>
-        </React.Fragment>
-    )
-}
 
 export default Home;
 
